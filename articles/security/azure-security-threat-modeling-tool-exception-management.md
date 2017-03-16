@@ -14,7 +14,7 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.date: 02/07/2017
-ms.author: rodsan
+ms.author: rodsan, qinx
 
 ---
 
@@ -60,7 +60,7 @@ Disable debugging information in the service. This can be accomplished by removi
 | References              | [MSDN](https://msdn.microsoft.com/library/ff648500.aspx), [Fortify Kingdom](https://vulncat.fortify.com/en/vulncat/index.html) |
 | Steps | Publicly exposing information about a service can provide attackers with valuable insight into how they might exploit the service. The `<serviceMetadata>` tag enables the metadata publishing feature. Service metadata could contain sensitive information that should not be publicly accessible. At a minimum, only allow trusted users to access the metadata and ensure that unnecessary information is not exposed. Better yet, entirely disable the ability to publish metadata. A safe WCF configuration will not contain the `<serviceMetadata>` tag. |
 
-## <a id="exception"></a>Ensure that proper exception handling is done in ASP.NET Web API
+## <a id="exception"></a>Ensure that proper exception handling is done in ASP.NET Web API and WCF Service
 
 | Title                   | Details      |
 | ----------------------- | ------------ |
@@ -85,7 +85,7 @@ public Product GetProduct(int id)
 }
 ```
 
-### Example
+### Example 
 For further control on the exception response, the `HttpResponseMessage` class can be used as shown below: 
 ```C#
 public Product GetProduct(int id)
