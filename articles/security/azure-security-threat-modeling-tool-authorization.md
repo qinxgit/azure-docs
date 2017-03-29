@@ -157,7 +157,7 @@ Now an possible attacker can not tamper and change the application operation sin
 | Steps | <p>Row-Level Security enables customers to control access to rows in a database table based on the characteristics of the user executing a query (e.g., group membership or execution context).</p><p>Row-Level Security (RLS) simplifies the design and coding of security in your application. RLS enables you to implement restrictions on data row access. For example ensuring that workers can access only those data rows that are pertinent to their department, or restricting a customer's data access to only the data relevant to their company.</p><p>The access restriction logic is located in the database tier rather than away from the data in another application tier. The database system applies the access restrictions every time that data access is attempted from any tier. This makes the security system more reliable and robust by reducing the surface area of the security system.</p><p>|
 
 Please note that RLS as an out-of-the-box database feature is applicable only to SQL Server starting 2016 and Azure SQL database. If the out-of-the-box RLS feature is not implemented, it should be ensured that data access is restricted Using Views and Procedures
-
+a
 ## <a id="sysadmin-users"></a>Sysadmin role should only have valid necessary users
 
 | Title                   | Details      |
@@ -167,7 +167,7 @@ Please note that RLS as an out-of-the-box database feature is applicable only to
 | Applicable Technologies | Generic |
 | Attributes              | N/A  |
 | References              | [SQL Database permissions hierarchy](https://msdn.microsoft.com/library/ms191465), [SQL database securables](https://msdn.microsoft.com/library/ms190401) |
-| Steps | Members of the SysAdmin fixed server role should be very limited and never contain accounts used by applications.  Please review the list of users in the role and remove any unnecessary accounts|
+b| Steps | Members of the SysAdmin fixed server role should be very limited and never contain accounts used by applications.  Please review the list of users in the role and remove any unnecessary accounts|
 
 ## <a id="cloud-least-privileged"></a>Connect to Cloud Gateway using least-privileged tokens
 
@@ -177,7 +177,7 @@ Please note that RLS as an out-of-the-box database feature is applicable only to
 | SDL Phase               | Deployment |  
 | Applicable Technologies | Generic |
 | Attributes              | Gateway choice - Azure IoT Hub |
-| References              | [Iot Hub Access Control](https://azure.microsoft.com/documentation/articles/iot-hub-devguide/#Security) |
+a| References              | [Iot Hub Access Control](https://azure.microsoft.com/documentation/articles/iot-hub-devguide/#Security) |
 | Steps | Provide least privilege permissions to various components that connect to Cloud Gateway (IoT Hub). Typical example is – Device management/provisioning component uses registryread/write, Event Processor (ASA) uses Service Connect. Individual devices connect using Device credentials|
 
 ## <a id="sendonly-sas"></a>Use a send-only permissions SAS Key for generating device tokens
@@ -187,7 +187,7 @@ Please note that RLS as an out-of-the-box database feature is applicable only to
 | Component               | Azure Event Hub | 
 | SDL Phase               | Build |  
 | Applicable Technologies | Generic |
-| Attributes              | N/A  |
+ | Attributes              | N/A  |
 | References              | [Event Hubs authentication and security model overview](https://azure.microsoft.com/documentation/articles/event-hubs-authentication-and-security-model-overview/) |
 | Steps | A SAS key is used to generate individual device tokens. Use a send-only permissions SAS key while generating the device token for a given publisher|
 
@@ -235,7 +235,7 @@ Please note that RLS as an out-of-the-box database feature is applicable only to
 | References              | [Use role assignments to manage access to your Azure subscription resources](https://azure.microsoft.com/documentation/articles/role-based-access-control-configure/)  |
 | Steps | Azure Role-Based Access Control (RBAC) enables fine-grained access management for Azure. Using RBAC, you can grant only the amount of access that users need to perform their jobs.|
 
-## <a id="cluster-rbac"></a>Restrict client's access to cluster operations using RBAC
+## <a id="cluster-rbac"></a>Restrict client's access to cluster operations using RBAC  !!!!
 
 | Title                   | Details      |
 | ----------------------- | ------------ |
