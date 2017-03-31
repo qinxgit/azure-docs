@@ -1,9 +1,9 @@
----
+fa---
 title: Sensitive Data - Microsoft Threat Modeling Tool - Azure | Microsoft Docs
 description: mitigations for threats exposed in the Threat Modeling Tool 
 services: security
 documentationcenter: na
-author: RodSan
+aauthor: RodSan
 manager: RodSan
 editor: RodSan
 
@@ -13,27 +13,27 @@ ms.workload: na
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
-ms.date: 02/07/2017
+bms.date: 02/07/2017
 ms.author: rodsan
 
 ---
 
-# Security Frame: Sensitive Data | Mitigations 
+ # Security Frame: Sensitive Data | Mitigations 
 | Product/Service | Article |
 | --------------- | ------- |
 | Machine Trust Boundary | <ul><li>[Ensure that binaries are obfuscated if they contain sensitive information](#binaries-info)</li><li>[Consider using Encrypted File System (EFS) is used to protect confidential user-specific data](#efs-user)</li><li>[Ensure that sensitive data stored by the application on the file system is encrypted](#filesystem)</li></ul> | 
 | Web Application | <ul><li>[Ensure that sensitive content is not cached on the browser](#cache-browser)</li><li>[Encrypt sections of Web App's configuration files that contain sensitive data](#encrypt-data)</li><li>[Explicitly disable the autocomplete HTML attribute in sensitive forms and inputs](#autocomplete-input)</li><li>[Ensure that sensitive data displayed on the user screen is masked](#data-mask)</li></ul> | 
-| Database | <ul><li>[Implement dynamic data masking to limit sensitive data exposure non privileged users](#dynamic-users)</li><li>[Ensure that passwords are stored in salted hash format](#salted-hash)</li><li>[ Ensure that sensitive data in database columns is encrypted](#db-encrypted)</li><li>[Ensure that database-level encryption (TDE) is enabled](#tde-enabled)</li><li>[Ensure that database backups are encrypted](#backup)</li></ul> | 
+a| Database | <ul><li>[Implement dynamic data masking to limit sensitive data exposure non privileged users](#dynamic-users)</li><li>[Ensure that passwords are stored in salted hash format](#salted-hash)</li><li>[ Ensure that sensitive data in database columns is encrypted](#db-encrypted)</li><li>[Ensure that database-level encryption (TDE) is enabled](#tde-enabled)</li><li>[Ensure that database backups are encrypted](#backup)</li></ul> | 
 | Web API | <ul><li>[Ensure that sensitive data relevant to Web API is not stored in browser's storage](#api-browser)</li></ul> | 
 | Azure Document DB | <ul><li>[Encrypt sensitive data stored in DocumentDB](#encrypt-docdb)</li></ul> | 
 | Azure IaaS VM Trust Boundary | <ul><li>[Use Azure Disk Encryption to encrypt disks used by Virtual Machines](#disk-vm)</li></ul> | 
 | Service Fabric Trust Boundary | <ul><li>[Encrypt secrets in Service Fabric applications](#fabric-apps)</li></ul> | 
 | Dynamics CRM | <ul><li>[Perform security modeling and use Business Units/Teams where required](#modeling-teams)</li><li>[Minimize access to share feature on critical entities](#entities)</li><li>[Train users on the risks associated with the Dynamics CRM Share feature and good security practices](#good-practices)</li><li>[Include a development standards rule proscribing showing config details in exception management](#exception-mgmt)</li></ul> | 
-| Azure Storage | <ul><li>[Use Azure Storage Service Encryption (SSE) for Data at Rest (Preview)](#sse-preview)</li><li>[Use Client-Side Encryption to store sensitive data in Azure Storage](#client-storage)</li></ul> | 
+| Azure Storage | <ul><li>[Use Azure Storage Service Encryption (SSE) for Data at Rest d(Preview)](#sse-preview)</li><li>[Use Client-Side Encryption to store sensitive data in Azure Storage](#client-storage)</li></ul> | 
 | Mobile Client | <ul><li>[Encrypt sensitive or PII data written to phones local storage](#pii-phones)</li><li>[Obfuscate generated binaries before distributing to end users](#binaries-end)</li></ul> | 
 | WCF | <ul><li>[ Set clientCredentialType to Certificate or Windows](#cert)</li><li>[WCF-Security Mode is not enabled](#security)</li></ul> | 
 
-## <a id="binaries-info"></a>Ensure that binaries are obfuscated if they contain sensitive information
+## <a id="binaries-info"></a>Ensure that binaries are obfuscated if they contain sensitive information 
 
 | Title                   | Details      |
 | ----------------------- | ------------ |
@@ -53,7 +53,7 @@ ms.author: rodsan
 | Applicable Technologies | Generic |
 | Attributes              | N/A  |
 | References              | N/A  |
-| Steps | Consider using Encrypted File System (EFS) is used to protect confidential user-specific data from adversaries with physical access to the computer. |
+ad| Steps | Consider using Encrypted File System (EFS) is used to protect f user-specific data from adversaries with physical access to the computer. |
 
 ## <a id="filesystem"></a>Ensure that sensitive data stored by the application on the file system is encrypted
 
